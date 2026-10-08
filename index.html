@@ -549,7 +549,7 @@ button .ui-icon{pointer-events:none}
       <button id="createAccountBtn" class="welcome-main-btn" type="button">Crear una cuenta <span>→</span></button>
       <button id="loginAccountBtn" class="welcome-secondary-btn" type="button">Ya tengo una cuenta</button>
     </div>
-    <div class="welcome-foot">Versión de prueba: tu información se guarda solo en este dispositivo.</div>
+    <div class="welcome-foot">Tu información se guarda de forma segura en tu cuenta.</div>
   </div>
 </div>
 
@@ -572,6 +572,7 @@ button .ui-icon{pointer-events:none}
       <div class="auth-field"><label>Contraseña</label><input id="loginPassword" type="password" autocomplete="current-password" required placeholder="Tu contraseña"></div>
       <button class="auth-submit" type="submit">Entrar <span>→</span></button>
       <div id="loginMessage" class="auth-message" role="status"></div>
+      <button id="forgotPassBtn" class="auth-switch-btn" type="button">¿Olvidaste tu contraseña?</button>
       <button id="goRegisterFromLogin" class="auth-switch-btn" type="button">¿No tienes cuenta? Crear una</button>
     </form>
     <form id="registerForm" class="auth-form" hidden>
@@ -582,7 +583,7 @@ button .ui-icon{pointer-events:none}
       <div id="registerMessage" class="auth-message" role="status"></div>
       <button id="goLoginFromRegister" class="auth-switch-btn" type="button">¿Ya tienes cuenta? Iniciar sesión</button>
     </form>
-    <div class="auth-note">Versión de prueba: las cuentas se guardan en este dispositivo. La conexión a una base de datos en la nube será la siguiente etapa.</div>
+    <div class="auth-note">Tu cuenta y tus datos se guardan de forma segura en la nube, para que los tengas en todos tus dispositivos.</div>
   </div>
 </div>
 <div class="app">
@@ -772,13 +773,13 @@ button .ui-icon{pointer-events:none}
 <section id="miperfil" class="page"><div id="profileView"></div></section>
 
 <section id="ayuda" class="page"><div class="help">
-<details><summary>¿Dónde se guarda mi información?</summary><p>En este dispositivo y en este navegador, dentro de tu cuenta. Todavía no se sincroniza con otros dispositivos. En Configuración puedes descargar una copia de tus datos o borrarlos cuando quieras.</p></details>
+<details><summary>¿Dónde se guarda mi información?</summary><p>En tu cuenta, de forma segura en la nube. Puedes entrar desde cualquier dispositivo con tu correo y contraseña. En Configuración puedes descargar una copia de tus datos o borrarlos cuando quieras.</p></details>
 <details><summary>¿Cómo instalo la app en mi teléfono?</summary><p>En iPhone: abre el sitio en Safari, toca Compartir y elige «Añadir a pantalla de inicio». En Android: abre el sitio en Chrome, toca los tres puntos y elige «Añadir a pantalla de inicio» o «Instalar aplicación». El nombre de la opción puede variar según tu dispositivo.</p></details>
 <details><summary>¿Qué hago primero?</summary><p>Abre «Comienza aquí» dentro de Mi Recorrido: son cinco pasos cortos, en el orden del ebook. También puedes empezar por el diagnóstico en Mi Recorrido.</p></details>
 <details><summary>¿Cómo me muevo por la app?</summary><p>Abajo tienes cinco secciones: Inicio, Mi Recorrido, Organizar, Bienestar y Perfil. Dentro de cada una encuentras sus páginas, y arriba siempre ves dónde estás. El botón + sirve solo para crear algo: una tarea, un evento, una meta, una lista, un movimiento, una nota o un proyecto.</p></details>
 <details><summary>¿Cómo se conecta la app con el ebook?</summary><p>Mi Recorrido tiene una etapa por cada capítulo del ebook. El ebook te enseña, el planner te ayuda a organizarte y la app es donde llevas lo aprendido a la práctica.</p></details>
 <details><summary>¿Los tests son un diagnóstico?</summary><p>No. Son herramientas de reflexión y orientación personal. No reemplazan la ayuda de una profesional de la salud.</p></details>
-<details><summary>Cerré sesión. ¿Perdí mis datos?</summary><p>No. Tu información queda guardada en este dispositivo. Al volver a entrar con tu correo y contraseña la recuperas.</p></details>
+<details><summary>Cerré sesión. ¿Perdí mis datos?</summary><p>No. Tu información queda guardada en tu cuenta. Al volver a entrar con tu correo y contraseña la recuperas.</p></details>
 <details><summary>Necesito ayuda urgente</summary><p>Toca el botón SOS, arriba a la derecha, o abre la sección Emergencias. Si hay un peligro inmediato, llama a los números de emergencia de tu país.</p></details>
 </div></section>
 
@@ -807,7 +808,7 @@ button .ui-icon{pointer-events:none}
 <div class="grid cards2" style="margin-top:14px"><div class="card"><div class="sectionhead"><h3>Mi historial</h3><span class="muted">Tus propios registros</span></div><div id="cycleHistory"></div></div><div class="card"><h3>Entender mi ciclo</h3><p class="muted">No todos los ciclos son iguales. Registrar fechas, dolor, flujo y síntomas puede ayudarte a identificar qué se repite en tu caso y qué cambia de un mes a otro.</p><p class="muted" style="font-size:12px">Los consejos de autocuidado de esta sección se basan en orientación general de fuentes sanitarias como NHS. No sustituyen una evaluación profesional.</p></div></div>
 </section>
 <section id="diario" class="page">
-<div class="journal-hero"><div class="label">MI ESPACIO PRIVADO</div><h2>Un lugar para bajar el ruido</h2><p class="muted">Aquí no tienes que ser productiva, positiva ni tener todo resuelto. Puedes escribir para desahogarte, entender lo que sientes o simplemente dejar algo fuera de tu cabeza.</p><div class="journal-privacy">Este diario se guarda en el espacio de tu cuenta en este dispositivo.</div></div>
+<div class="journal-hero"><div class="label">MI ESPACIO PRIVADO</div><h2>Un lugar para bajar el ruido</h2><p class="muted">Aquí no tienes que ser productiva, positiva ni tener todo resuelto. Puedes escribir para desahogarte, entender lo que sientes o simplemente dejar algo fuera de tu cabeza.</p><div class="journal-privacy">Este diario se guarda en el espacio de tu cuenta.</div></div>
 <div class="journal-shell">
   <div class="card journal-prompts-card">
     <h3>¿Por dónde quieres empezar?</h3>
@@ -870,6 +871,59 @@ button .ui-icon{pointer-events:none}
 
 <div id="appToast" class="app-toast" aria-live="polite"></div><div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modalbox"><div class="modalhead"><h2 id="modalTitle">Agregar</h2><button class="close" type="button" aria-label="Cerrar" onclick="V50.Modal.requestClose()">×</button></div><div id="modalBody"></div></div></div>
 
+<script id="fb-layer">
+/* ---------- Firebase (Auth + Firestore) · Mujer Independiente ---------- */
+(function(){
+const cfg={apiKey:"AIzaSyCCXhYvye5T5TTtOvCK_hSomFPO1nwBAvw",authDomain:"mujer-independiente-app.firebaseapp.com",projectId:"mujer-independiente-app",storageBucket:"mujer-independiente-app.firebasestorage.app",messagingSenderId:"196538872514",appId:"1:196538872514:web:059dea5d3fcb36f2f8415b"};
+const V='10.12.2',B='https://www.gstatic.com/firebasejs/'+V+'/';
+let api=null,pushT=0,pushing=false,warned=false;
+const dirtyKey=e=>'miEspacioDirty:'+e, syncKey=e=>'miEspacioSyncAt:'+e;
+const ready=(async()=>{
+  try{
+    const [A,Au,F]=await Promise.all([import(B+'firebase-app.js'),import(B+'firebase-auth.js'),import(B+'firebase-firestore.js')]);
+    const app=A.initializeApp(cfg),auth=Au.getAuth(app),db=F.getFirestore(app);
+    const first=new Promise(res=>{const un=Au.onAuthStateChanged(auth,u=>{un();res(u)})});
+    const user0=await first;
+    api={
+      auth,user:()=>auth.currentUser,user0,
+      async signIn(e,p){return (await Au.signInWithEmailAndPassword(auth,e,p)).user},
+      async signUp(n,e,p){const c=await Au.createUserWithEmailAndPassword(auth,e,p);try{await Au.updateProfile(c.user,{displayName:n})}catch(x){}return c.user},
+      async reset(e){auth.languageCode='es';return Au.sendPasswordResetEmail(auth,e)},
+      async signOut(){return Au.signOut(auth)},
+      async pull(){const u=auth.currentUser;if(!u)return null;const d=await F.getDoc(F.doc(db,'users',u.uid));return d.exists()?d.data():null},
+      async push(str){const u=auth.currentUser;if(!u)throw new Error('no-user');const at=Date.now();await F.setDoc(F.doc(db,'users',u.uid),{data:str,updatedAt:at,email:u.email||''});return at},
+      async destroy(){const u=auth.currentUser;if(!u)return;await F.deleteDoc(F.doc(db,'users',u.uid));await Au.deleteUser(u)}
+    };
+    return api;
+  }catch(e){console.warn('[Mi Espacio] Firebase no disponible',e);return null}
+})();
+async function pushNow(){
+  if(pushing)return;const fb=api;if(!fb||!fb.user())return;
+  const email=(fb.user().email||'').toLowerCase();if(!email)return;
+  const str=localStorage.getItem('miEspacioState:'+email);if(!str)return;
+  if(str.length>900000){if(!warned){warned=true;try{V50.UI.toast('Tus datos son muy grandes para guardarse en la nube. Prueba con una foto más pequeña.',{kind:'error'})}catch(e){}}return}
+  pushing=true;
+  try{const at=await fb.push(str);localStorage.setItem(syncKey(email),String(at));if(localStorage.getItem('miEspacioState:'+email)===str)localStorage.removeItem(dirtyKey(email))}
+  catch(e){console.warn('[Mi Espacio] No se pudo sincronizar',e)}
+  finally{pushing=false}
+}
+window.FBSync={
+  ready,
+  mark(){const fb=api;if(!fb||!fb.user())return;const email=(fb.user().email||'').toLowerCase();try{localStorage.setItem(dirtyKey(email),'1')}catch(e){}clearTimeout(pushT);pushT=setTimeout(pushNow,1500)},
+  flush(){clearTimeout(pushT);return pushNow()},
+  /* al entrar: decide qué versión manda (la local con cambios sin subir, o la de la nube) */
+  async onLogin(email){
+    const fb=api;if(!fb)return;
+    let remote=null;try{remote=await fb.pull()}catch(e){console.warn('pull',e);return}
+    const key='miEspacioState:'+email,local=localStorage.getItem(key),dirty=localStorage.getItem(dirtyKey(email))==='1';
+    if(remote&&remote.data&&(!local||!dirty)){
+      const lastSync=+localStorage.getItem(syncKey(email))||0;
+      if(!local||remote.updatedAt>lastSync){localStorage.setItem(key,remote.data);localStorage.setItem(syncKey(email),String(remote.updatedAt||Date.now()));localStorage.removeItem(dirtyKey(email))}
+    }else if(local){localStorage.setItem(dirtyKey(email),'1');await pushNow()}
+  }
+};
+})();
+</script>
 <script>
 
 const DEFAULT_STATE={
@@ -895,7 +949,7 @@ try{
  projects:Array.isArray(s.projects)?s.projects:[],wellbeing:Array.isArray(s.wellbeing)?s.wellbeing:[],cycle:Array.isArray(s.cycle)?s.cycle:[],diary:Array.isArray(s.diary)?s.diary:[],weeklyMenu:{...b.weeklyMenu,...(s.weeklyMenu||{})},shoppingItems:Array.isArray(s.shoppingItems)?s.shoppingItems:[],cv:{...b.cv,...(s.cv||{})},wellbeingHabits:Array.isArray(s.wellbeingHabits)?s.wellbeingHabits:b.wellbeingHabits,wellbeingCustomHabits:Array.isArray(s.wellbeingCustomHabits)?s.wellbeingCustomHabits:b.wellbeingCustomHabits};
 }catch(e){console.error('[Mi Espacio] Datos ilegibles',e);try{const raw=localStorage.getItem(userKey());if(raw)localStorage.setItem(userKey()+':corrupt:'+Date.now(),raw)}catch(err){console.debug("[Mi Espacio]",err)}window.__stateRecovered=true;return structuredClone(DEFAULT_STATE)}
 } let state=loadState();
-function saveState(quiet){try{localStorage.setItem(userKey(),JSON.stringify(state));if(window.V50&&quiet!==true)V50.UI.saved();return true}catch(e){console.error('[Mi Espacio] No se pudo guardar',e);if(window.V50)V50.UI.toast('No pudimos guardar tus cambios. Es posible que el almacenamiento del dispositivo esté lleno.',{kind:'error'});return false}}
+function saveState(quiet){try{localStorage.setItem(userKey(),JSON.stringify(state));try{if(window.FBSync&&currentUser)FBSync.mark()}catch(_e){}if(window.V50&&quiet!==true)V50.UI.saved();return true}catch(e){console.error('[Mi Espacio] No se pudo guardar',e);if(window.V50)V50.UI.toast('No pudimos guardar tus cambios. Es posible que el almacenamiento del dispositivo esté lleno.',{kind:'error'});return false}}
 function accounts(){try{return JSON.parse(localStorage.getItem('miEspacioAccounts')||'{}')}catch{return {}}}
 function saveAccounts(a){localStorage.setItem('miEspacioAccounts',JSON.stringify(a))}
 function setMessage(id,msg,success=false){const el=document.getElementById(id);if(!el)return;el.textContent=msg;el.className='auth-message'+(success?' success':'')}
@@ -1050,9 +1104,9 @@ function renderProfile(){const e=document.getElementById("profileView");if(!e)re
  <section class="pf-sec" aria-labelledby="pfh1"><h3 id="pfh1">Tu recorrido</h3>${row("Etapas exploradas",Object.keys(rc.stages).length+" de "+RC_STAGES.length)}${row("Diagnóstico",rc.tests.diagnostico?"Completado":"Pendiente")}${row("Desafíos",Object.keys(rc.ch).length+" de "+RC_CH.length)}${row("30 días",Object.keys(rc.days).length+" de 30")}<button class="btn-ghost" type="button" style="margin-top:10px" onclick="goJourney('home')">Ir a Mi Recorrido</button></section>
  <section class="pf-sec" aria-labelledby="pfh2"><h3 id="pfh2">Tu actividad</h3><div class="pf-stats">${stat(done,"tareas completadas")}${stat((state.goals||[]).length,"metas creadas")}${stat((state.diary||[]).length,"entradas en tu diario")}${stat(ritDays,"días con ritual")}</div></section>
  <section class="pf-sec" aria-labelledby="pfh3"><h3 id="pfh3">Preferencias</h3>${row("Cómo te llamamos",esc(nick||name))}${row("Tu enfoque",p.focus?esc(p.focus):"Sin elegir")}${row("Al abrir la app",({last:"Donde me quedé",inicio:"Inicio",recorrido:"Mi Recorrido"})[V50.Prefs.get().start]||"Donde me quedé")}${row("Animaciones",V50.Prefs.get().motion==="reduce"?"Reducidas":"Automáticas")}<button class="btn-ghost" type="button" style="margin-top:10px" onclick="go('configuracion')">Cambiar preferencias</button></section>
- <section class="pf-sec" aria-labelledby="pfh3b"><h3 id="pfh3b">Información de cuenta</h3>${row("Correo",esc(email||"—"))}${row("Miembra desde",esc(since))}${row("Tipo de cuenta","En este dispositivo")}</section>
- <section class="pf-sec" aria-labelledby="pfh4"><h3 id="pfh4">Tus datos</h3><p class="note">Se guardan solo en este dispositivo. Puedes descargar una copia o borrarlos.</p><div class="pf-actions" style="margin-top:10px"><button class="btn-ghost" type="button" data-v50="export">Descargar una copia de mis datos</button></div></section>
- <section class="pf-sec" aria-labelledby="pfh5"><h3 id="pfh5">Sesión</h3><div class="pf-actions"><button class="btn-danger" type="button" data-v50="logout">Cerrar sesión</button></div><p class="note" style="margin-top:10px">Versión de prueba: tu información se guarda solo en este dispositivo.</p></section></div>`}
+ <section class="pf-sec" aria-labelledby="pfh3b"><h3 id="pfh3b">Información de cuenta</h3>${row("Correo",esc(email||"—"))}${row("Miembra desde",esc(since))}${row("Tipo de cuenta","En la nube")}</section>
+ <section class="pf-sec" aria-labelledby="pfh4"><h3 id="pfh4">Tus datos</h3><p class="note">Se guardan en tu cuenta. Puedes descargar una copia o borrarlos.</p><div class="pf-actions" style="margin-top:10px"><button class="btn-ghost" type="button" data-v50="export">Descargar una copia de mis datos</button></div></section>
+ <section class="pf-sec" aria-labelledby="pfh5"><h3 id="pfh5">Sesión</h3><div class="pf-actions"><button class="btn-danger" type="button" data-v50="logout">Cerrar sesión</button></div><p class="note" style="margin-top:10px">Tu información se guarda de forma segura en tu cuenta.</p></section></div>`}
 function renderTrips(){const e=document.getElementById("tripsList");if(!e)return;const a=state.trips||[];e.innerHTML=a.length?a.map((x,i)=>`<article class="card" style="margin-bottom:14px"><div class="trip-photo-wrap">${x.image?`<img class="trip-photo" src="${x.image}" alt="Destino ${esc(x.title)}" onerror="this.style.display='none'">`:`<div class="trip-photo-loading">Sin foto todavía</div>`}</div><div style="padding-top:14px"><div class="sectionhead"><div><h2 style="font-family:'Crimson Pro',Georgia,serif;margin:0">${esc(x.title)}</h2><p class="muted">${esc(formatDates(x.from,x.to))}</p></div><button class="mini-btn" onclick="openModal('trip',${i})">Editar</button></div><div class="trip-meta"><div><small>Presupuesto</small><b>$${money(x.budget)}</b></div><div><small>Itinerario</small><b>${(x.itinerary||[]).length} actividades</b></div><div><small>Lugares</small><b>${(x.places||[]).length}</b></div></div><div class="trip-tools"><button class="trip-tool" onclick="openModal('tripDetails',${i})">Itinerario</button><button class="trip-tool" onclick="openModal('tripDetails',${i})">Equipaje</button><button class="trip-tool" onclick="openModal('tripDetails',${i})">Lugares</button><button class="trip-tool" onclick="openModal('trip',${i})">Presupuesto</button></div><div style="display:flex;justify-content:flex-end;margin-top:10px"><button class="mini-btn danger-btn" onclick="deleteTrip(${i})">Eliminar viaje</button></div></div></article>`).join(""):`${V50.UI.empty({title:"Todavía no tienes viajes.",text:"Guarda destino, fechas, presupuesto, itinerario y equipaje.",actions:[["Planear un viaje","openModal(\'trip\')"]]})}`}
 function openPrefilled(type,preset){openModal(type,null,preset)}
 
@@ -1093,7 +1147,7 @@ let diaryEditing=-1;
 function diaryUiReset(){diaryEditing=-1;const b=document.getElementById('diarySaveBtn');if(b)b.textContent='Guardar';const n=document.getElementById('diaryEditNote');if(n)n.hidden=true}
 function editDiary(i){const x=(state.diary||[])[i];if(!x)return;diaryEditing=i;const set=(id,v)=>{const e=document.getElementById(id);if(e)e.value=v};set('diaryTitle',x.title==='Sin título'?'':x.title);set('diaryText',x.text);set('diaryMood',x.mood||'Tranquila');set('diaryType',x.type||'Libre');updateDiaryCount();const b=document.getElementById('diarySaveBtn');if(b)b.textContent='Guardar cambios';const n=document.getElementById('diaryEditNote');if(n)n.hidden=false;const t=document.getElementById('diaryText');if(t){t.scrollIntoView({block:'center',behavior:V50.Prefs.get().motion==='reduce'?'auto':'smooth'});t.focus()}}
 function saveDiaryEntry(){const title=document.getElementById('diaryTitle')?.value.trim()||'Sin título';const text=document.getElementById('diaryText')?.value.trim()||'';if(!text){showToast('Escribe algo antes de guardar');return}state.diary=state.diary||[];const fields={title,text,mood:document.getElementById('diaryMood')?.value||'Otro',type:document.getElementById('diaryType')?.value||'Libre'},editing=diaryEditing>=0&&state.diary[diaryEditing];if(editing){Object.assign(state.diary[diaryEditing],fields,{edited:new Date().toLocaleString('es-CL')})}else state.diary.unshift({date:new Date().toLocaleString('es-CL'),...fields});saveState(true);clearDiaryDraft();diaryUiReset();renderDiary();V50.UI.toast(editing?'Entrada actualizada ✓':'Entrada guardada ✓',{ms:1600})}
-function renderDiary(){loadDiaryDraft();const e=document.getElementById('diaryHistory');if(!e)return;const a=state.diary||[];e.innerHTML=a.length?a.map((x,i)=>`<article class="journal-entry"><div class="journal-entry-head"><div><span class="journal-entry-type">${esc(x.type||'Libre')}</span><h3>${esc(x.title)}</h3><div class="muted">${esc(x.date)} · ${esc(x.mood)}</div></div><div class="item-actions"><button class="mini-btn" type="button" onclick="editDiary(${i})">Editar</button><button class="mini-btn danger-btn" type="button" onclick="deleteDiary(${i})">Eliminar</button></div></div><p>${esc(x.text)}</p></article>`).join(''):`${V50.UI.empty({title:"Tu diario está vacío.",text:"Es un lugar para escribir sin editarte. Solo tú lo ves, en este dispositivo.",actions:[["Escribir ahora","document.getElementById(\'diaryText\')&&document.getElementById(\'diaryText\').focus()"]]})}`}
+function renderDiary(){loadDiaryDraft();const e=document.getElementById('diaryHistory');if(!e)return;const a=state.diary||[];e.innerHTML=a.length?a.map((x,i)=>`<article class="journal-entry"><div class="journal-entry-head"><div><span class="journal-entry-type">${esc(x.type||'Libre')}</span><h3>${esc(x.title)}</h3><div class="muted">${esc(x.date)} · ${esc(x.mood)}</div></div><div class="item-actions"><button class="mini-btn" type="button" onclick="editDiary(${i})">Editar</button><button class="mini-btn danger-btn" type="button" onclick="deleteDiary(${i})">Eliminar</button></div></div><p>${esc(x.text)}</p></article>`).join(''):`${V50.UI.empty({title:"Tu diario está vacío.",text:"Es un lugar para escribir sin editarte. Solo tú lo ves.",actions:[["Escribir ahora","document.getElementById(\'diaryText\')&&document.getElementById(\'diaryText\').focus()"]]})}`}
 async function deleteDiary(i){if(!await V50.UI.confirmDelete("esta entrada"))return;if(diaryEditing===i)diaryUiReset();else if(diaryEditing>i)diaryEditing--;state.diary.splice(i,1);saveState();renderDiary()}
 function saveWeeklyMenu(){const days=['Lunes','Martes','Miércoles','Jueves','Viernes','Sábado','Domingo'];state.weeklyMenu=state.weeklyMenu||{};days.forEach(d=>{const el=document.getElementById('menu_'+d);if(el)state.weeklyMenu[d]=el.value});saveState();generateShoppingFromMenu();renderWeeklyMenu();showToast('Menú semanal guardado')}
 function mealJump(id){const el=document.getElementById(id);if(!el)return;el.scrollIntoView({behavior:'smooth',block:'start'});el.classList.remove('meal-focus');void el.offsetWidth;el.classList.add('meal-focus');setTimeout(()=>el.classList.remove('meal-focus'),1200)}
@@ -1128,7 +1182,7 @@ recipe:[r?"Editar receta":"Nueva receta",`<form onsubmit="saveRecipe(event,${ind
 project:[p?"Editar proyecto":"Nuevo proyecto",`<form onsubmit="saveProject(event,${index===null?-1:index})"><div class="field"><label>Proyecto</label><input name="title" required value="${esc(p?.title||preset||"")}"></div><div class="field" style="margin-top:10px"><label>Estado</label><select name="status"><option ${p?.status==="Pendiente"?"selected":""}>Pendiente</option><option ${p?.status==="En progreso"?"selected":""}>En progreso</option><option ${p?.status==="Completado"?"selected":""}>Completado</option></select></div><div class="field" style="margin-top:10px"><label>Notas</label><textarea name="note" rows="5">${esc(p?.note||"")}</textarea></div><button class="primary" style="width:100%;margin-top:14px">Guardar</button></form>`],
 note:["Nueva nota",`<form onsubmit="saveNote(event)"><div class="field"><label for="noteTitle">Título (opcional)</label><input id="noteTitle" name="title" maxlength="80" placeholder="Ej: Idea para el fin de semana"></div><div class="field"><label for="noteText">¿Qué quieres anotar?</label><textarea id="noteText" name="text" rows="6" maxlength="8000" required placeholder="Escribe aquí"></textarea><small class="muted">Se guarda en tu diario.</small></div><button class="primary">Guardar nota</button></form>`],
 install:["Instalar la app",`<div class="install-steps"><p class="muted">Instalarla te permite abrirla desde tu pantalla de inicio, como cualquier otra app. El nombre de la opción puede variar según tu dispositivo.</p><h4>iPhone</h4><ol><li>Abre el sitio en Safari.</li><li>Toca Compartir.</li><li>Elige «Añadir a pantalla de inicio».</li><li>Toca «Añadir».</li></ol><h4>Android</h4><ol><li>Abre el sitio en Chrome.</li><li>Toca los tres puntos.</li><li>Elige «Añadir a pantalla de inicio» o «Instalar aplicación».</li><li>Confirma.</li></ol></div>`],
-profile:["Mi perfil",`<form onsubmit="saveProfile(event)"><div class="field"><label>Nombre completo</label><input name="name" required value="${esc(state.profile?.name||accounts()[currentUser]?.name||"")}"></div><div class="field" style="margin-top:10px"><label>¿Cómo quieres que te llamemos?</label><input name="nickname" value="${esc(state.profile?.nickname||"")}" placeholder="Ej: Lau, Cami, Anto..."></div><div class="field" style="margin-top:10px"><label>Correo</label><input name="email" type="email" value="${esc(state.profile?.email||currentUser)}"></div><div class="field" style="margin-top:10px"><label>Foto de perfil</label><input name="photo" type="file" accept="image/*"><small class="muted">La foto se guarda en este dispositivo junto con tu perfil.</small></div><div style="margin-top:10px">${state.profile?.photo?`<img class="profile-avatar" src="${state.profile.photo}" alt="Foto actual">`:``}</div><button class="primary" style="width:100%;margin-top:14px">Guardar perfil</button></form>`]
+profile:["Mi perfil",`<form onsubmit="saveProfile(event)"><div class="field"><label>Nombre completo</label><input name="name" required value="${esc(state.profile?.name||accounts()[currentUser]?.name||"")}"></div><div class="field" style="margin-top:10px"><label>¿Cómo quieres que te llamemos?</label><input name="nickname" value="${esc(state.profile?.nickname||"")}" placeholder="Ej: Lau, Cami, Anto..."></div><div class="field" style="margin-top:10px"><label>Correo</label><input name="email" type="email" value="${esc(state.profile?.email||currentUser)}"></div><div class="field" style="margin-top:10px"><label>Foto de perfil</label><input name="photo" type="file" accept="image/*"><small class="muted">La foto se guarda en tu cuenta junto con tu perfil.</small></div><div style="margin-top:10px">${state.profile?.photo?`<img class="profile-avatar" src="${state.profile.photo}" alt="Foto actual">`:``}</div><button class="primary" style="width:100%;margin-top:14px">Guardar perfil</button></form>`]
 };
 [title.textContent,body.innerHTML]=C[type]||C.financeSettings;window.__modalFocus=document.activeElement;m.classList.add("show");document.body.classList.add("modal-open");if(window.V50){V50.Modal.enhance(m);V50.a11yLabels(m)}try{paintIcons()}catch(err){console.debug("[Mi Espacio]",err)}setTimeout(()=>{const f=m.querySelector("input:not([type=hidden]),textarea,select");if(f)try{f.focus({preventScroll:true})}catch(err){console.debug("[Mi Espacio]",err)}},60);
 }
@@ -1216,46 +1270,76 @@ authBack.addEventListener('click',()=>{
   document.body.classList.remove('in-app');
 });
 
+function fbErr(err){
+  const c=(err&&err.code)||'';
+  if(/invalid-credential|user-not-found|wrong-password|invalid-login/.test(c))return 'El correo o la contraseña no coinciden.';
+  if(c==='auth/email-already-in-use')return 'Ese correo ya tiene una cuenta. Elige “Ya tengo una cuenta”.';
+  if(c==='auth/weak-password')return 'La contraseña debe tener al menos 6 caracteres.';
+  if(c==='auth/invalid-email')return 'Escribe un correo válido.';
+  if(c==='auth/too-many-requests')return 'Demasiados intentos. Espera unos minutos y vuelve a probar.';
+  if(c==='auth/network-request-failed')return 'Sin conexión. Revisa tu internet e inténtalo otra vez.';
+  if(c==='auth/unauthorized-domain')return 'Este sitio aún no está autorizado en Firebase.';
+  return 'No pudimos completar la acción. Inténtalo otra vez.';
+}
+async function fbOrMsg(id){
+  const fb=await FBSync.ready;
+  if(!fb){setMessage(id,'No pudimos conectarnos. Revisa tu internet e inténtalo otra vez.');return null}
+  return fb;
+}
+async function afterAuth(user,name){
+  const email=String(user.email||'').toLowerCase();
+  const nm=name||user.displayName||'';
+  currentUser=email;
+  localStorage.setItem('miEspacioCurrentUser',email);
+  localStorage.setItem('miEspacioName',nm);
+  const a=accounts();a[email]=Object.assign({},a[email],{name:nm||(a[email]&&a[email].name)||'',createdAt:(a[email]&&a[email].createdAt)||new Date().toISOString()});saveAccounts(a);
+  await FBSync.onLogin(email);
+  enterApp();
+}
+function busy(form,on){const b=form.querySelector('.auth-submit');if(b)b.disabled=on}
 loginForm.addEventListener('submit',async e=>{
   e.preventDefault();
   const email=document.getElementById('loginEmail').value.trim().toLowerCase();
   const pass=document.getElementById('loginPassword').value;
-  const a=accounts();
   if(!email||!pass){setMessage('loginMessage','Escribe tu correo y tu contraseña.');return}
-  if(!a[email]){setMessage('loginMessage','No encontramos una cuenta con ese correo.');return}
-  if(!await V50.Credentials.verify(a[email],pass)){setMessage('loginMessage','La contraseña no coincide.');return}
-  /* cuentas antiguas: la contraseña en texto plano se reemplaza por un hash al entrar */
-  if(typeof a[email].password==='string'){Object.assign(a[email],await V50.Credentials.make(pass));delete a[email].password;saveAccounts(a)}
-  currentUser=email;
-  localStorage.setItem('miEspacioCurrentUser',email);
-  localStorage.setItem('miEspacioName',a[email].name||'');
-  enterApp();
+  busy(loginForm,true);setMessage('loginMessage','Entrando…',true);
+  try{const fb=await fbOrMsg('loginMessage');if(!fb)return;const u=await fb.signIn(email,pass);await afterAuth(u,'')}
+  catch(err){setMessage('loginMessage',fbErr(err))}
+  finally{busy(loginForm,false)}
 });
-
+document.getElementById('forgotPassBtn').addEventListener('click',async()=>{
+  const email=document.getElementById('loginEmail').value.trim().toLowerCase();
+  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){setMessage('loginMessage','Escribe tu correo arriba y vuelve a tocar “¿Olvidaste tu contraseña?”.');return}
+  try{const fb=await fbOrMsg('loginMessage');if(!fb)return;await fb.reset(email);setMessage('loginMessage','Listo 🌷 Si ese correo tiene cuenta, te enviamos un mensaje para crear una nueva contraseña (revisa también spam).',true)}
+  catch(err){setMessage('loginMessage',fbErr(err))}
+});
 registerForm.addEventListener('submit',async e=>{
   e.preventDefault();
   const name=document.getElementById('registerName').value.trim();
   const email=document.getElementById('registerEmail').value.trim().toLowerCase();
   const pass=document.getElementById('registerPassword').value;
-  const a=accounts();
   if(!name){setMessage('registerMessage','Escribe tu nombre.');return}
   if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){setMessage('registerMessage','Escribe un correo válido.');return}
   if(pass.length<6){setMessage('registerMessage','La contraseña debe tener al menos 6 caracteres.');return}
-  if(a[email]){
-    setMessage('registerMessage','Ese correo ya tiene una cuenta. Elige “Ya tengo una cuenta”.');
-    return;
-  }
-  a[email]={name,createdAt:new Date().toISOString(),...await V50.Credentials.make(pass)};
-  saveAccounts(a);
-  currentUser=email;
-  localStorage.setItem('miEspacioCurrentUser',email);
-  localStorage.setItem('miEspacioName',name);
-  enterApp();
+  busy(registerForm,true);setMessage('registerMessage','Creando tu cuenta…',true);
+  try{const fb=await fbOrMsg('registerMessage');if(!fb)return;const u=await fb.signUp(name,email,pass);await afterAuth(u,name)}
+  catch(err){setMessage('registerMessage',fbErr(err))}
+  finally{busy(registerForm,false)}
 });
 
 // If a session exists, go straight to the app. Otherwise show the dedicated welcome screen.
-if(currentUser && accounts()[currentUser]){
+if(currentUser){
   enterApp();
+  /* confirma la sesión con Firebase y sincroniza en segundo plano */
+  FBSync.ready.then(async fb=>{
+    if(!fb)return; /* sin conexión: se sigue con los datos locales */
+    if(!fb.user0){localStorage.removeItem('miEspacioCurrentUser');location.reload();return}
+    const email=String(fb.user0.email||'').toLowerCase();
+    if(email!==currentUser){localStorage.removeItem('miEspacioCurrentUser');location.reload();return}
+    const before=localStorage.getItem(userKey());
+    await FBSync.onLogin(email);
+    if(localStorage.getItem(userKey())!==before){state=loadState();try{render()}catch(e){console.warn(e)}}
+  });
 }else{
   // No active account: show only the two access choices.
   localStorage.removeItem('miEspacioCurrentUser');
@@ -2268,7 +2352,7 @@ Prefs.apply();
 /* ---------- AuthService (hoy local; Fase 2 -> Firebase Authentication) ---------- */
 const AuthService={
   current(){return localStorage.getItem('miEspacioCurrentUser')||''},
-  async logout(){localStorage.removeItem('miEspacioCurrentUser');localStorage.removeItem('miEspacioName')}
+  async logout(){try{await Promise.race([FBSync.flush(),new Promise(r=>setTimeout(r,3000))]);const fb=await FBSync.ready;if(fb)await fb.signOut()}catch(e){console.warn(e)}localStorage.removeItem('miEspacioCurrentUser');localStorage.removeItem('miEspacioName')}
   /* Fase 2: register(), login(), resetPassword(), onAuthChanged() */
 };
 
@@ -2314,7 +2398,7 @@ const Data={
     ['miEspacioState:'+email,'miEspacioTrusted:'+email,'miEspacioLastPage:'+email].forEach(k=>localStorage.removeItem(k));
     Object.keys(localStorage).filter(k=>k.startsWith('miEspacioState:'+email+':corrupt')).forEach(k=>localStorage.removeItem(k));
     try{const a=JSON.parse(localStorage.getItem('miEspacioAccounts')||'{}');delete a[email];localStorage.setItem('miEspacioAccounts',JSON.stringify(a))}catch(e){warn('wipeAccount',e)}
-    localStorage.removeItem('miEspacioCurrentUser');localStorage.removeItem('miEspacioName');localStorage.removeItem('miEspacioLastPage:'+email);
+    localStorage.removeItem('miEspacioCurrentUser');localStorage.removeItem('miEspacioName');localStorage.removeItem('miEspacioLastPage:'+email);localStorage.removeItem('miEspacioDirty:'+email);localStorage.removeItem('miEspacioSyncAt:'+email);
   }
 };
 
@@ -2409,15 +2493,16 @@ function identity(){
 
 /* ---------- Cerrar sesión ---------- */
 async function logout(){
-  const ok=await UI.confirm({title:'¿Cerrar sesión?',text:'Tu información sigue guardada en este dispositivo. Podrás volver a entrar con tu correo y contraseña.',yes:'Cerrar sesión',no:'Quedarme'});
+  const ok=await UI.confirm({title:'¿Cerrar sesión?',text:'Tu información sigue guardada en tu cuenta. Podrás volver a entrar desde cualquier dispositivo con tu correo y contraseña.',yes:'Cerrar sesión',no:'Quedarme'});
   if(!ok)return;
   await AuthService.logout();
   try{history.replaceState(null,'',location.pathname)}catch(err){console.debug("[Mi Espacio]",err)}
   location.reload();
 }
 async function deleteAccount(){
-  const ok=await UI.confirm({title:'¿Eliminar mis datos de este dispositivo?',text:'Se borrarán tu cuenta y toda tu información guardada aquí. Antes puedes descargar una copia. Esto no se puede deshacer.',yes:'Eliminar todo',no:'Cancelar',danger:true});
+  const ok=await UI.confirm({title:'¿Eliminar mi cuenta y mis datos?',text:'Se borrarán tu cuenta y toda tu información, también de la nube. Antes puedes descargar una copia. Esto no se puede deshacer.',yes:'Eliminar todo',no:'Cancelar',danger:true});
   if(!ok)return;
+  try{const fb=await FBSync.ready;if(fb&&fb.user())await fb.destroy()}catch(err){UI.toast(err&&err.code==='auth/requires-recent-login'?'Por seguridad, cierra sesión, vuelve a entrar y luego elimina tu cuenta.':'No pudimos eliminar tu cuenta. Inténtalo otra vez.',{kind:'error'});return}
   Data.wipeAccount();try{history.replaceState(null,'',location.pathname)}catch(err){console.debug("[Mi Espacio]",err)}
   location.reload();
 }
@@ -2518,7 +2603,7 @@ const NAV=[
  {id:'configuracion',label:'Configuración',icon:'settings',desc:'Apariencia, inicio y datos',parent:'perfil',group:'Tu cuenta'},
  {id:'instalar',label:'Instalar app',icon:'download',desc:'Ábrela como una app',parent:'perfil',group:'Tu cuenta',page:false,act:'install'},
  {id:'ayuda',label:'Ayuda',icon:'help',desc:'Dudas frecuentes',parent:'perfil',group:'Tu cuenta'},
- {id:'cerrar',label:'Cerrar sesión',icon:'logout',desc:'Tu información queda en este dispositivo',parent:'perfil',group:'Sesión',page:false,act:'logout'}];
+ {id:'cerrar',label:'Cerrar sesión',icon:'logout',desc:'Tu información queda en tu cuenta',parent:'perfil',group:'Sesión',page:false,act:'logout'}];
 const NAV_PAGES=NAV.filter(n=>n.page!==false);
 const NAV_BY_ID=Object.fromEntries(NAV.map(n=>[n.id,n]));
 const sectionOf=id=>{const n=NAV_BY_ID[id];return n?(n.parent||n.id):'inicio'};
@@ -2750,7 +2835,7 @@ function renderSettings(){
   '<section class="pf-sec" aria-labelledby="cf1"><h3 id="cf1">Apariencia</h3><p class="note">Modo de movimiento: en «Reducido» se quitan las animaciones y transiciones.</p>'+seg('motion',[['auto','Automático'],['reduce','Reducido']],'Modo de movimiento')+
    '<div class="pf-row"><span>Mostrar la frase del día en Inicio</span><label class="switch"><input type="checkbox" data-pref="quote" '+(P.quote!==false?'checked':'')+' aria-label="Mostrar la frase del día"><i></i></label></div></section>'+
   '<section class="pf-sec" aria-labelledby="cf2"><h3 id="cf2">Inicio</h3><p class="note">Elige qué página abrir al entrar a la app.</p>'+seg('start',[['last','Donde me quedé'],['inicio','Inicio'],['recorrido','Mi Recorrido']],'Página de inicio')+'</section>'+
-  '<section class="pf-sec" aria-labelledby="cf3"><h3 id="cf3">Datos</h3><p class="note">Tu información se guarda solo en este dispositivo. Puedes descargar una copia o borrarla.</p><div class="pf-actions" style="margin-top:10px"><button class="btn-ghost" type="button" data-v50="export">Descargar una copia de mis datos</button><button class="btn-danger" type="button" data-v50="wipe">Eliminar mis datos de este dispositivo</button></div></section>'+
+  '<section class="pf-sec" aria-labelledby="cf3"><h3 id="cf3">Datos</h3><p class="note">Tu información se guarda en tu cuenta. Puedes descargar una copia o borrarla.</p><div class="pf-actions" style="margin-top:10px"><button class="btn-ghost" type="button" data-v50="export">Descargar una copia de mis datos</button><button class="btn-danger" type="button" data-v50="wipe">Eliminar mi cuenta y mis datos</button></div></section>'+
   '<section class="pf-sec" aria-labelledby="cf4"><h3 id="cf4">Cuenta</h3><div class="pf-actions"><button class="btn-ghost" type="button" data-action="install">Instalar la app</button><button class="btn-danger" type="button" data-v50="logout">Cerrar sesión</button></div></section></div>';
 }
 document.addEventListener('click',e=>{
