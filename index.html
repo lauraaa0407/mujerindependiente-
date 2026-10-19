@@ -3342,6 +3342,63 @@ if(!localStorage.getItem('miEspacioSchema'))localStorage.setItem('miEspacioSchem
  }
 })();
 </script>
+<!-- ===== v52 · Listas hacia abajo + CV completo, sin cortes y con foto ===== -->
+<style id="v52-fix">
+/* Listas: un ítem por fila, como el resto de las listas */
+.list-card{padding:18px}
+.list-card .sectionhead{align-items:flex-start;gap:10px}
+.list-card .item-actions{display:flex;gap:6px;flex-wrap:wrap}
+.list-card .item-actions .mini-btn{min-height:34px;padding:0 12px;font-size:13px}
+.list-progress{height:6px;border-radius:99px;background:#F3E4EA;overflow:hidden;margin:12px 0 4px}
+.list-progress i{display:block;height:100%;border-radius:inherit;background:linear-gradient(90deg,var(--berry,#B83B68),var(--burg,#6E3A5D));transition:width .35s}
+.checklist-list{display:grid!important;gap:8px;margin-top:12px}
+.checklist-item{display:flex!important;align-items:center;gap:12px;width:100%;padding:12px 14px;margin:0;border:1px solid var(--line,#E9D9CC);border-radius:14px;background:#fff;cursor:pointer;transition:background .2s,border-color .2s}
+.checklist-item input{-webkit-appearance:none;appearance:none;width:24px;height:24px;margin:0;flex:none;border-radius:50%;border:2px solid #D9C3CF;background:#fff;display:grid;place-items:center;cursor:pointer;transition:.2s}
+.checklist-item input:checked{background:var(--burg,#6E3A5D);border-color:var(--burg,#6E3A5D)}
+.checklist-item input:checked::after{content:"";width:10px;height:5px;border:2.5px solid #fff;border-top:0;border-right:0;transform:translateY(-1px) rotate(-45deg)}
+.checklist-item span{flex:1;min-width:0;overflow-wrap:anywhere}
+.checklist-item.checked,.checklist-item:has(input:checked){background:#F8EEF2;border-color:#E6CBD7}
+.checklist-item.checked span,.checklist-item:has(input:checked) span{color:var(--muted,#6E5560);text-decoration:line-through}
+
+/* CV: nada se sale de la pantalla */
+.cv-builder{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+.cv-builder>*{min-width:0}
+.cv-panel input,.cv-panel textarea,.cv-panel select{width:100%;max-width:100%;min-width:0;box-sizing:border-box}
+.cv-panel .formrow>*{min-width:0}
+.cv-preview{overflow-wrap:anywhere;max-width:100%;box-sizing:border-box}
+.cv-head>div{min-width:0}
+.cv-preview h1{overflow-wrap:break-word}
+.cv-photo-box input[type=file]{font-size:13px;max-width:100%}
+@media (max-width:900px){.cv-builder{grid-template-columns:minmax(0,1fr)!important}}
+@media (max-width:760px){
+ .cv-panel .formrow{grid-template-columns:1fr!important}
+ .cv-preview{padding:18px!important}
+ .cv-head{grid-template-columns:1fr 78px!important;gap:12px!important}
+ .cv-head .cv-photo{width:78px!important;height:96px!important}
+ .cv-preview h1{font-size:24px!important;line-height:1.15}
+}
+.cv-print-area{min-width:0;max-width:100%}
+</style>
+<script id="v52-fix-js">
+(function(){
+ /* Fotos: se achican antes de guardarse (una foto del celular pesa varios MB y no cabe en la nube) */
+ function shrink(file,max,q){return new Promise(function(res,rej){var u=URL.createObjectURL(file),im=new Image();
+  im.onload=function(){try{var s=Math.min(1,max/Math.max(im.width,im.height)),c=document.createElement('canvas');c.width=Math.round(im.width*s);c.height=Math.round(im.height*s);
+   var x=c.getContext('2d');x.fillStyle='#fff';x.fillRect(0,0,c.width,c.height);x.drawImage(im,0,0,c.width,c.height);URL.revokeObjectURL(u);res(c.toDataURL('image/jpeg',q))}catch(e){URL.revokeObjectURL(u);rej(e)}};
+  im.onerror=function(e){URL.revokeObjectURL(u);rej(e)};im.src=u})}
+ if(typeof fileToDataUrl==='function'){var f0=fileToDataUrl;
+  fileToDataUrl=function(file){if(file&&/^image\//.test(file.type||'')&&!/gif|svg/.test(file.type)){return shrink(file,900,0.82).catch(function(){return f0(file)})}return f0(file)}}
+
+ /* CV: la foto se guarda apenas la eliges, y la vista previa muestra todos tus datos */
+ document.addEventListener('change',function(e){if(e.target&&e.target.id==='cvPhotoFile'&&e.target.files&&e.target.files[0]&&typeof saveCV==='function'){saveCV()}});
+ function fmtDate(d){var m=/^(\d{4})-(\d{2})-(\d{2})$/.exec(d||'');return m?m[3]+'-'+m[2]+'-'+m[1]:(d||'')}
+ if(typeof renderCV==='function'){var r0=renderCV;renderCV=function(){var r=r0.apply(this,arguments);try{
+  var c=state.cv||{},head=document.querySelector('#cvView .cv-head > div');if(head&&!head.querySelector('.cv-id')){
+   var bits=[c.run?'RUT '+c.run:'',c.birthDate?'Nacimiento '+fmtDate(c.birthDate):'',c.nationality||''].filter(Boolean);
+   if(bits.length){var d=document.createElement('div');d.className='cv-meta cv-id';d.textContent=bits.join(' · ');head.appendChild(d)}}
+  }catch(e){console.debug('[Mi Espacio] v52 cv',e)}return r}}
+})();
+</script>
 
 </body>
 </html>
